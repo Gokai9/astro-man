@@ -1,0 +1,11 @@
+---
+const navb = [
+    {to: "/", name: "home"},
+    {to: "/about", name: "about"},
+    {to: "/blog", name: "blog"}
+]
+---
+
+<div class="flex justify-end pb-2">
+{navb.map(n => <a class="pr-4" href={n.to}>{n.name}</a>)}
+</div>

@@ -1,0 +1,41 @@
+
+---
+import Header from "../components/Header.astro";
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+        <style>
+            .sk{
+                color: aquamarine;
+            }
+        </style>
+	</head>
+	<body>
+        <Header />
+		<h1>Our About Page</h1>
+        <p>You dont know anything about {identity.firstName}, where do you think she lives? {identity.country} 
+            who care you dont even know about her job as {identity.occupation} or her hobbies {identity.hobbies.map(hobby => <span>{hobby} </span>)}
+        </p>
+        <h3>Dou you have job for me? let me know.</h3>
+        <ul>
+        {skills.map(skill => <li class="sk">{skill}</li>)}
+    </ul>
+	</body>
+</html>
