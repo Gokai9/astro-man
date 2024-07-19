@@ -1,19 +1,7 @@
 ---
-import Header from "../components/Header.astro";
-
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Where freedom Lie</title>
-	</head>
-	<body>
-        <Header />
+<BaseLayout title="Blog">
 		<h1>Our Blog Page</h1>
         <h2>Teehe</h2>
         <ul>
@@ -23,5 +11,4 @@ import Header from "../components/Header.astro";
         </ul>
         </ul>
         </ul>
-	</body>
-</html>
+</BaseLayout>
