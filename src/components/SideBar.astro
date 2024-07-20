@@ -1,0 +1,21 @@
+---
+const allPosts = await Astro.glob("../pages/posts/*.md")
+const uniqueTags = [... new Set(allPosts.flatMap(post => post.frontmatter.tags))]
+
+---
+<div class="flex flex-col w-1/4"
+  <p>Posts tagged with </p>
+  <ul>
+    {uniqueTags ? uniqueTags.map((tag) => <input class="p-3 border-2" type="button" value={tag}/>): ""}
+  </ul>
+
+</div>
+
+<script>
+    const buttons = document.querySelectorAll("input")
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            button.value 
+        })
+    })
+</script>

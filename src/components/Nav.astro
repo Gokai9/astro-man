@@ -6,6 +6,6 @@ const navb = [
 ]
 ---
 
-<div class="flex justify-end py-2">
+<nav class="flex justify-end py-2">
 {navb.map(n => <a class="mr-2 pr-2 rounded hover:bg-sky-200" href={n.to}>{n.name.charAt(0).toUpperCase() + n.name.slice(1)}</a>)}
-</div>
+</nav>
